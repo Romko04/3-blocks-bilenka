@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilenka</title>
+    <link rel="stylesheet" href="./css/libraries/swiper.css" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <main class="main">
+            <section class="hero">
+                <div class="hero__content">
+                    <div class="container">
+                        <h1 class="hero__title">Як зробити продажі курсу <strong>системними та стабільними?</strong>
+                        </h1>
+                    </div>
+                    <div class="video__wrapper">
+                        <script src="https://fast.wistia.com/player.js" async></script>
+                        <script src="https://fast.wistia.com/embed/m4wawa66g6.js" async type="module"></script>
+                        <!--         <script src="https://fast.wistia.com/embed/medias/6ept3t03lh.jsonp" async></script> -->
+                        <!--         <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script> -->
+                        <div class="container">
+                            <style>
+                                wistia-player[media-id='m4wawa66g6']:not(:defined) {
+                                    background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/m4wawa66g6/swatch');
+                                    display: block;
+                                    filter: blur(5px);
+                                    padding-top: 62.5%;
+                                }
+                            </style> <wistia-player media-id="m4wawa66g6"></wistia-player>
+                        </div>
+                    </div>
+            </section>
+            <section class="form">
+                <div class="container">
+                    <div class="form__content">
+                        <div class="form__text-wrapper">
+                            <p>
+                                <strong>Заповнюй анкету, щоб записатися на безкоштовний розбір в zoom від мене та моєї команди,</strong> на якому ти отримаєш вирішення своєї проблеми
+                            </p>
+                        </div>
+                        <form class="form__wrapper" action="">
+                            <div class="input__block">
+                                <input type="text" name="name" class="name form__input" placeholder="Ім'я">
+                                <span></span>
+                            </div>
+                            <div class="input__block">
+                                <input type="tel" name="phone" class="phone form__input" placeholder="*Номер телефону">
+                                <span></span>
+                            </div>
+                            <div class="input__block">
+                                <input type="email" name="email" class="email form__input" placeholder="*Email">
+                                <span></span>
+                            </div>
+     
+                            <div class="input__block">
+                                <input type="text" name="niche" class="niche form__input" placeholder="*Ніша">
+                                <span></span>
+                            </div>
+                            <div class="input__block">
+                                <input type="text" name="problem" class="problem form__input" placeholder="*Проблема">
+                                <span></span>
+                            </div>
+                            <div class="form__content-bottom">
+                                <button type="submit" class="btn submit__btn">Надіслати<img class="circle--img"
+                                        src="./img/circle-white.svg" alt="circle"></button>
+                                <span class="submit__span"></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section id="cases" class="cases">
+                <div class="title__wrapper">
+                    <h2 class="title cases__title">
+                        <span class="cases__title-top">Результати</span>
+                        <span class="cases__title-bottom">моїх Студентів</span>
+                    </h2>
+                </div>
+                <div class="container cases__container">
+                    <div class="swiper__container">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper__slide-content">
+                                        <img src="./img/case1.png" alt="case">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__slide-content">
+                                        <img src="./img/case1.png" alt="case">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__slide-content">
+                                        <img src="./img/case1.png" alt="case">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-button__wrapper">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        <a class="btn insta__btn" href="">
+                            В ІНСТАГРАМ
+                            <img src="./img/instagram.png" alt="">
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+    <script defer src="./js/libraries/swiper.js"></script>
+    <script defer src="./js/script.js"></script>
+</body>
+
+</html>
