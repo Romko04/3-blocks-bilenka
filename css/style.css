@@ -206,7 +206,7 @@ table {
     background-size: cover;
     width: 100%;
     top: 0;
-    background-size: 100% 60rem; /* Ширина 100%, висота 120rem */
+    background-size: 100% 26rem; /* Ширина 100%, висота 120rem */
     overflow: hidden;
 }
 
@@ -248,6 +248,7 @@ table {
 
 wistia-player {
     border: .3rem solid #fe761e;
+    height: 21.4rem;
 }
 
 .error-input {
@@ -282,7 +283,6 @@ wistia-player {
     font-size: 1.5rem;
     line-height: 122%;
     letter-spacing: -0.04em;
-    color: rgba(0, 0, 0, 0.5);
 }
 
 .btn {
@@ -345,7 +345,7 @@ wistia-player {
 
 
 .form__input::placeholder {
-    color: rgba(0, 0, 0, 0.40);
+    color: rgba(0, 0, 0, 0.5);
     /* Add other styles for the placeholder here */
 }
 
@@ -493,3 +493,14 @@ wistia-player {
     height: 1.8rem;
 }
 
+.error-message{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 131%;
+    letter-spacing: 0.03em;
+    font-variant: small-caps;
+    color: #fff;
+    margin-top: .5rem;
+    display: block;
+}

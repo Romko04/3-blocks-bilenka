@@ -7,10 +7,9 @@ new Swiper(".swiper", {
         prevEl: ".swiper-button-prev"
     },
 });
-
 function removeError(field) {
     field.classList.remove('error-field');
-    const errorSpan = field.nextElementSibling;
+    const errorSpan = field.parentNode.querySelector('.error-message');
     if (errorSpan) errorSpan.textContent = '';
     const parent = field.parentNode;
     if (parent && parent.classList.contains('error')) {
@@ -19,7 +18,7 @@ function removeError(field) {
 }
 
 function createError(field, message) {
-    let errorSpan = field.nextElementSibling;
+    let errorSpan = field.parentNode.querySelector('.error-message');
     if (!errorSpan) {
         errorSpan = document.createElement('span');
         errorSpan.classList.add('error-message');
@@ -36,14 +35,18 @@ function isValidEmail(email) {
 
 function validation(form) {
     let isValid = true;
-    const allFields = form.querySelectorAll('.move__input');
+    const allFields = form.querySelectorAll('.form__input');
 
     allFields.forEach(field => removeError(field));
 
     allFields.forEach(field => {
-        if (field.classList.contains('input__email') && !isValidEmail(field.value)) {
+        if (!field.value.trim()) {
             isValid = false;
-            createError(field, "Емейл обов'язковий для заповнення");
+            createError(field, "Це поле обов'язкове для заповнення");
+        }
+        if (field.classList.contains('email') && !isValidEmail(field.value)) {
+            isValid = false;
+            createError(field, "Некоректний формат email");
         }
     });
 
@@ -75,6 +78,7 @@ async function submitFormToWP(formData) {
         }
     } catch (error) {
         button.classList.remove('active');
+        button.classList.remove('finished');
         const span = button.nextElementSibling;
         if (span) span.textContent = 'Щось пішло не так';
     }
@@ -84,11 +88,11 @@ document.querySelector('form').addEventListener('submit', function (e) {
     e.preventDefault();
     if (validation(this)) {
         const formData = {};
-        this.querySelectorAll('.move__input').forEach(field => {
+        this.querySelectorAll('.form__input').forEach(field => {
             formData[field.name] = field.value;
-            field.value = '';
-            removeError(field);
         });
-        submitFormToWP(formData);
+        console.log(formData);
+        
+        // submitFormToWP(formData);
     }
 });
