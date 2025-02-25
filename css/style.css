@@ -355,11 +355,12 @@ wistia-player {
 }
 
 .swiper__slide-content {
-    box-shadow: -6px 4px 29px 0 rgba(0, 0, 0, 0.41);
+    padding: 2rem;
 }
 
 .swiper__slide-content img {
     width: 100%;
+    box-shadow: -.3rem .2rem .5rem 0 rgba(0, 0, 0, 0.41);
     height: 100%;
 }
 .swiper-button__wrapper {
